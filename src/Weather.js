@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CurrentDate from "./CurrentDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -12,7 +13,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
-      date: "Monday 03:54",
+      date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -43,7 +44,9 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <CurrentDate date={weatherData.date} />
+          </li>
           <li>{weatherData.description}</li>
         </ul>
         <div className="row">
