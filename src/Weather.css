@@ -16,7 +16,7 @@
 .Weather li {
   font-size: 16px;
   font-size: 100;
-  line-height: 19px;
+  line-height: 17px;
   list-style: none;
   margin: 0 0 0 2px;
 }
@@ -31,7 +31,6 @@
 }
 
 .Weather canvas {
-  width: 58px;
   margin-top: 5px;
   margin-right: 8px;
   display: inline-block;
