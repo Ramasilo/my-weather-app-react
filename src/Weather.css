@@ -1,14 +1,22 @@
 .Weather {
   border: 1px solid #dadde1;
   font-family: arial, sans-serif;
-  color: rgb(135, 135, 135);
+  color: rgb(35, 35, 35);
   padding: 16px;
   border-radius: 4px;
 }
 
+.App .Weather {
+  font-family: "Rubik", sans-serif;
+
+  background-image: url("../images/clouds.jpg");
+  background-size: cover;
+  display: block;
+}
+
 .Weather h1 {
   font-weight: 100;
-  font-size: 24px;
+  font-size: 30px;
   line-height: 29px;
   margin: 20px 0 0 0;
 }
